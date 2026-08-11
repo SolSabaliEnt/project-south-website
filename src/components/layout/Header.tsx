@@ -50,7 +50,7 @@ export function Header() {
           </Link>
         </nav>
 
-        <a href={donateHref} className="donate-button">
+        <a href={donateHref} className="donate-button" style={{ gridColumn: 3 }}>
           Donate <span aria-hidden="true">→</span>
         </a>
       </div>

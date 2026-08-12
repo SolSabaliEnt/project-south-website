@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/site-path";
 
 type MediaBlockProps = {
   src?: string;
@@ -20,7 +21,7 @@ export function MediaBlock({
       <div className={`media-frame media-frame-${aspect}`}>
         {src ? (
           <Image
-            src={src}
+            src={withBasePath(src)}
             alt={alt}
             fill
             sizes="(max-width: 720px) 100vw, 50vw"

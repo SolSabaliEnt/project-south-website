@@ -19,8 +19,7 @@ export default function PressReleasesPage() {
             <div>
               <div className={styles.smallLabel}>Project South press archive</div>
               <p>
-                This archive preserves {pressArchiveCounts.total} unique releases from the legacy
-                Project South site: {pressArchiveCounts.pages} publication pages and {pressArchiveCounts.pdfs} direct PDF releases.
+                Explore {pressArchiveCounts.total} Project South releases, including {pressArchiveCounts.pages} publication pages and {pressArchiveCounts.pdfs} direct PDF releases.
               </p>
             </div>
           </div>
@@ -34,8 +33,7 @@ export default function PressReleasesPage() {
             <div>
               <h2 className={styles.headline}>Find the release. Follow the record.</h2>
               <p>
-                Search by title or topic, or separate original Project South publication pages from
-                direct PDF releases. Each item opens its original legacy destination in a new tab.
+                Search by title or topic, or browse Project South publication pages and direct PDF releases. Each item opens the original publication in a new tab.
               </p>
             </div>
           </div>

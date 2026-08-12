@@ -1,13 +1,31 @@
+import Image from "next/image";
 import Link from "next/link";
 import { donateHref, initiativeLinks } from "@/data/navigation";
+
+const logoSrc = "/brand/PS-Transparent-Logo-Red-2-1.webp";
 
 export function Footer() {
   return (
     <footer className="site-footer">
       <div className="site-footer-inner">
         <div>
-          <Link href="/" className="footer-brand">
-            PROJECT SOUTH
+          <Link href="/" className="footer-brand" aria-label="Project South home">
+            <span
+              style={{
+                position: "relative",
+                display: "block",
+                width: "150px",
+                height: "48px",
+              }}
+            >
+              <Image
+                src={logoSrc}
+                alt="Project South"
+                fill
+                sizes="150px"
+                style={{ objectFit: "contain", objectPosition: "left center" }}
+              />
+            </span>
           </Link>
           <p className="footer-copy">
             Institute for the Elimination of Poverty and Genocide

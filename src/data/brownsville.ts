@@ -34,4 +34,4 @@ export const brownsvilleMedia: Record<string, BrownsvilleMedia> = {
   },
 };
 
-export const rootedToBuildDocumentaryHref = "#";
+export const rootedToBuildDocumentaryHref = "https://www.youtube.com/watch?v=jRrTcdojZg4";

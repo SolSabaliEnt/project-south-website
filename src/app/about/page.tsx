@@ -77,7 +77,7 @@ export default function AboutPage() {
           <div>
             <div className="section-label">Leadership</div>
             <p className={styles.sectionIntro}>
-              The people responsible for stewarding strategy, infrastructure, and organizational direction.
+              Project South’s leadership stewards strategy, programs, infrastructure, and organizational direction.
             </p>
           </div>
 
@@ -102,8 +102,7 @@ export default function AboutPage() {
               Organizers, strategists, educators, attorneys, and support staff moving the work every day.
             </h2>
             <p>
-              This section is intentionally more dynamic than a plain directory. Every headshot is framed as
-              part of the movement story—not just a list.
+              Across organizing, legal advocacy, political education, operations, and narrative work, Project South staff helps build and sustain movement power every day.
             </p>
           </div>
 

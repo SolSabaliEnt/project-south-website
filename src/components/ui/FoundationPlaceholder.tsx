@@ -10,7 +10,7 @@ type FoundationPlaceholderProps = {
 export function FoundationPlaceholder({
   label,
   title,
-  note = "This route is reserved. Approved page content will be translated from the Framer prototype in the next phase.",
+  note = "More information about this work will be available here soon.",
 }: FoundationPlaceholderProps) {
   return (
     <section className="foundation-page">

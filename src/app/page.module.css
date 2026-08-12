@@ -67,7 +67,7 @@
   display: grid;
   grid-template-columns: 1fr 0.38fr;
   gap: 70px;
-  align-items: end;
+  align-items: start;
 }
 
 .heroEyebrow {
@@ -101,10 +101,11 @@
 }
 
 .heroAside {
+  margin-top: 104px;
   padding-top: 18px;
   border-top: 1px solid #333;
   color: #bfbfbb;
-  background: linear-gradient(90deg, rgba(9, 9, 9, 0.78), rgba(9, 9, 9, 0.38));
+  background: linear-gradient(90deg, rgba(9, 9, 9, 0.82), rgba(9, 9, 9, 0.42));
   backdrop-filter: blur(1px);
 }
 
@@ -498,6 +499,7 @@
   }
 
   .heroAside {
+    margin-top: 0;
     max-width: 520px;
     background: rgba(9, 9, 9, 0.5);
   }

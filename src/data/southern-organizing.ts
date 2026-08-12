@@ -54,7 +54,7 @@ export const southernMedia: Record<string, SouthernMedia> = {
     caption: "View of flooded New Orleans in the aftermath of Hurricane Katrina",
   },
   medic: {
-    src: "/images/southern-organizing/Screenshot 2026-08-11 at 8.36.35 PM.png",
+    src: "/images/southern-organizing/Screenshot 2026-08-11 at 8.31.25 PM.png",
     alt: "Project South Wilderness First Responder training",
   },
 };

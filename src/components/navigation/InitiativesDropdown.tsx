@@ -26,12 +26,7 @@ export function InitiativesDropdown() {
   }, []);
 
   return (
-    <div
-      ref={rootRef}
-      className="nav-dropdown"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-    >
+    <div ref={rootRef} className="nav-dropdown">
       <button
         type="button"
         className="nav-link nav-dropdown-trigger"

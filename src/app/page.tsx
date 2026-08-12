@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { donateHref } from "@/data/navigation";
 import { homeInitiatives, homeMedia, homeStories, type HomeMedia } from "@/data/home";
+import { withBasePath } from "@/lib/site-path";
 
 function Arrow() {
   return (
@@ -43,6 +44,17 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <section className={styles.hero}>
+        <div className={styles.heroVisual}>
+          <Image
+            src={withBasePath("/images/home/Mutual aid liberation center.png")}
+            alt="Community gathering outside the Mutual Aid Liberation Center"
+            fill
+            priority
+            sizes="(max-width: 820px) 100vw, 58vw"
+            className={styles.heroVisualImage}
+          />
+        </div>
+
         <div className={styles.container}>
           <div className={styles.heroGrid}>
             <div>

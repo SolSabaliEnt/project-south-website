@@ -1,5 +1,11 @@
 import { FoundationPlaceholder } from "@/components/ui/FoundationPlaceholder";
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return [];
+}
+
 type PressReleasePageProps = {
   params: Promise<{ slug: string }>;
 };

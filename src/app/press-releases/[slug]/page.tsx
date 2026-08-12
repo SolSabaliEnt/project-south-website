@@ -1,9 +1,16 @@
 import { FoundationPlaceholder } from "@/components/ui/FoundationPlaceholder";
+import { pressReleases } from "@/data/press-releases";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return [];
+  return pressReleases
+    .filter((release) => release.sourceType === "page")
+    .map((release) => {
+      const slug = new URL(release.href).pathname.replace(/^\/+|\/+$/g, "").split("/").at(-1);
+      return slug ? { slug } : null;
+    })
+    .filter((item): item is { slug: string } => Boolean(item));
 }
 
 type PressReleasePageProps = {

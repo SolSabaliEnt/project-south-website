@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { donateHref } from "@/data/navigation";
 import { InitiativesDropdown } from "@/components/navigation/InitiativesDropdown";
 import { MobileMenu } from "@/components/navigation/MobileMenu";
+import { withBasePath } from "@/lib/site-path";
 
 const logoSrc = "/brand/PS-Transparent-Logo-Red-2-1.webp";
 
@@ -34,7 +35,7 @@ export function Header() {
             }}
           >
             <Image
-              src={logoSrc}
+              src={withBasePath(logoSrc)}
               alt="Project South"
               fill
               priority

@@ -1,5 +1,5 @@
 import { PressArchive } from "@/components/press/PressArchive";
-import { pressArchiveCounts, pressReleases } from "@/data/press-releases";
+import { pressReleases } from "@/data/press-releases";
 import styles from "./page.module.css";
 
 export default function PressReleasesPage() {
@@ -19,7 +19,7 @@ export default function PressReleasesPage() {
             <div>
               <div className={styles.smallLabel}>Project South press archive</div>
               <p>
-                Explore {pressArchiveCounts.total} Project South releases, including {pressArchiveCounts.pages} publication pages and {pressArchiveCounts.pdfs} direct PDF releases.
+                Explore Project South statements, press releases, advisories, filings, and public responses across the organization’s work.
               </p>
             </div>
           </div>

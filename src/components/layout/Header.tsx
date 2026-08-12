@@ -26,26 +26,14 @@ export function Header() {
     <header className="site-header">
       <div className="site-header-inner">
         <Link href="/" className="brand-mark" aria-label="Project South home">
-          <span
-            style={{
-              position: "relative",
-              display: "block",
-              width: "280px",
-              height: "62px",
-            }}
-          >
+          <span className="header-logo-wrap">
             <Image
               src={withBasePath(logoSrc)}
               alt="Project South"
               fill
               priority
-              sizes="280px"
-              style={{
-                objectFit: "contain",
-                objectPosition: "left center",
-                transform: "scale(1.55)",
-                transformOrigin: "left center",
-              }}
+              sizes="(max-width: 820px) 140px, 280px"
+              className="header-logo-image"
             />
           </span>
         </Link>
@@ -81,6 +69,44 @@ export function Header() {
       </div>
 
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+
+      <style jsx global>{`
+        .header-logo-wrap {
+          position: relative;
+          display: block;
+          width: 280px;
+          height: 62px;
+        }
+
+        .header-logo-image {
+          object-fit: contain;
+          object-position: left center;
+          transform: scale(1.55);
+          transform-origin: left center;
+        }
+
+        @media (max-width: 820px) {
+          .brand-mark {
+            min-width: 0;
+          }
+
+          .header-logo-wrap {
+            width: 140px;
+            height: 48px;
+          }
+
+          .header-logo-image {
+            transform: scale(1.08);
+          }
+        }
+
+        @media (max-width: 420px) {
+          .header-logo-wrap {
+            width: 128px;
+            height: 46px;
+          }
+        }
+      `}</style>
     </header>
   );
 }

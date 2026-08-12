@@ -177,7 +177,8 @@
   text-transform: uppercase;
 }
 
-.redButton {
+.redButton,
+.dark .redButton {
   min-height: 50px;
   padding: 0 17px;
   background: var(--ps-red);

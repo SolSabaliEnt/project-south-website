@@ -19,7 +19,7 @@ export const movementOperationsSupportAreas = [
 
 export const movementOperationsMedia = {
   operations: {
-    src: undefined as string | undefined,
+    src: "/images/movement-operations/IMG_7572.webp",
     alt: "Project South Movement Operations work",
     caption: "",
   },

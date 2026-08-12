@@ -19,12 +19,17 @@ type PressReleasePageProps = {
 
 export default async function PressReleasePage({ params }: PressReleasePageProps) {
   const { slug } = await params;
+  const release = pressReleases.find((item) => {
+    if (item.sourceType !== "page") return false;
+    const itemSlug = new URL(item.href).pathname.replace(/^\/+|\/+$/g, "").split("/").at(-1);
+    return itemSlug === slug;
+  });
 
   return (
     <FoundationPlaceholder
       label="Press Release"
-      title={slug.replaceAll("-", " ")}
-      note="Individual press releases will be rendered here from structured content once the archive migration begins."
+      title={release?.title || slug.replaceAll("-", " ")}
+      note="This release remains part of Project South’s public record. Visit the Press Releases archive to open the original publication."
     />
   );
 }

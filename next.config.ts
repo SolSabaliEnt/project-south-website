@@ -1,16 +1,16 @@
 import type { NextConfig } from "next";
 
 const isGitHubPages = process.env.GITHUB_PAGES === "true";
-const basePath = isGitHubPages ? "/project-south-website" : "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH?.replace(/\/$/, "") || "";
 
 const nextConfig: NextConfig = {
   devIndicators: false,
   ...(isGitHubPages
     ? {
         output: "export" as const,
-        basePath,
         trailingSlash: true,
         images: { unoptimized: true },
+        ...(basePath ? { basePath, assetPrefix: basePath } : {}),
         env: {
           NEXT_PUBLIC_BASE_PATH: basePath,
         },

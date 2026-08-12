@@ -1,10 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { donateHref } from "@/data/navigation";
 import { InitiativesDropdown } from "@/components/navigation/InitiativesDropdown";
 import { MobileMenu } from "@/components/navigation/MobileMenu";
+
+const logoSrc = "/brand/PS-Transparent-Logo-Red-2-1.webp";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +25,23 @@ export function Header() {
     <header className="site-header">
       <div className="site-header-inner">
         <Link href="/" className="brand-mark" aria-label="Project South home">
-          <span className="brand-mark-primary">PROJECT SOUTH</span>
+          <span
+            style={{
+              position: "relative",
+              display: "block",
+              width: "clamp(112px, 11vw, 150px)",
+              height: "46px",
+            }}
+          >
+            <Image
+              src={logoSrc}
+              alt="Project South"
+              fill
+              priority
+              sizes="150px"
+              style={{ objectFit: "contain", objectPosition: "left center" }}
+            />
+          </span>
         </Link>
 
         <button

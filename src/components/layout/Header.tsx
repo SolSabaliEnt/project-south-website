@@ -30,7 +30,7 @@ export function Header() {
             style={{
               position: "relative",
               display: "block",
-              width: "clamp(150px, 15vw, 210px)",
+              width: "280px",
               height: "62px",
             }}
           >
@@ -39,8 +39,13 @@ export function Header() {
               alt="Project South"
               fill
               priority
-              sizes="210px"
-              style={{ objectFit: "contain", objectPosition: "left center" }}
+              sizes="280px"
+              style={{
+                objectFit: "contain",
+                objectPosition: "left center",
+                transform: "scale(1.55)",
+                transformOrigin: "left center",
+              }}
             />
           </span>
         </Link>

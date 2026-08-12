@@ -30,8 +30,8 @@ export function Header() {
             style={{
               position: "relative",
               display: "block",
-              width: "clamp(112px, 11vw, 150px)",
-              height: "46px",
+              width: "clamp(150px, 15vw, 210px)",
+              height: "62px",
             }}
           >
             <Image
@@ -39,7 +39,7 @@ export function Header() {
               alt="Project South"
               fill
               priority
-              sizes="150px"
+              sizes="210px"
               style={{ objectFit: "contain", objectPosition: "left center" }}
             />
           </span>

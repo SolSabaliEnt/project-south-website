@@ -24,7 +24,7 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <div className="site-header-inner">
+      <div className="site-header-inner" style={{ position: "relative" }}>
         <Link href="/" className="brand-mark" aria-label="Project South home">
           <span className="header-logo-wrap">
             <Image
@@ -45,6 +45,7 @@ export function Header() {
           aria-controls="mobile-navigation"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((value) => !value)}
+          style={{ zIndex: 4 }}
         >
           <span className="mobile-menu-icon" aria-hidden="true">
             <span />

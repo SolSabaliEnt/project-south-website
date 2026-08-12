@@ -83,6 +83,7 @@ export function Header() {
           object-position: left center;
           transform: scale(1.55);
           transform-origin: left center;
+          pointer-events: none;
         }
 
         @media (max-width: 820px) {
@@ -97,17 +98,6 @@ export function Header() {
 
           .header-logo-image {
             transform: scale(1.55);
-          }
-
-          .site-header-inner .mobile-menu-trigger {
-            position: static;
-            left: auto;
-            top: auto;
-            transform: none;
-            grid-column: 2;
-            grid-row: 1;
-            justify-self: center;
-            align-self: center;
           }
 
           .mobile-menu-trigger.is-open .mobile-menu-icon span:nth-child(1) {
@@ -131,10 +121,6 @@ export function Header() {
           .header-logo-wrap {
             width: 136px;
             height: 50px;
-          }
-
-          .header-logo-image {
-            transform: scale(1.55);
           }
         }
       `}</style>

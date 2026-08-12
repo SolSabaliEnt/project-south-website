@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PersonCard } from "@/components/ui/PersonCard";
 import { aboutHeaderMedia, hungerCoalition, leadership, staff } from "@/data/about";
 import { donateHref } from "@/data/navigation";
+import { withBasePath } from "@/lib/site-path";
 import styles from "./page.module.css";
 
 function Arrow() {
@@ -30,7 +31,7 @@ export default function AboutPage() {
               <div className={styles.headerMedia}>
                 {aboutHeaderMedia.src ? (
                   <Image
-                    src={aboutHeaderMedia.src}
+                    src={withBasePath(aboutHeaderMedia.src)}
                     alt={aboutHeaderMedia.alt}
                     fill
                     priority
@@ -85,11 +86,7 @@ export default function AboutPage() {
             <div className={styles.leadershipGrid}>
               {leadership.map((person, index) => (
                 <div key={person.name} className={styles.personOffset} data-offset={index % 4}>
-                  <PersonCard
-                    {...person}
-                    size="large"
-                    imageAlt={person.imageAlt || person.name}
-                  />
+                  <PersonCard {...person} size="large" imageAlt={person.imageAlt || person.name} />
                 </div>
               ))}
             </div>

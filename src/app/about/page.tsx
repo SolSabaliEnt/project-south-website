@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PersonCard } from "@/components/ui/PersonCard";
 import { aboutHeaderMedia, hungerCoalition, leadership, staff } from "@/data/about";
 import { donateHref } from "@/data/navigation";
+import { withBasePath } from "@/lib/site-path";
 import styles from "./page.module.css";
 
 function Arrow() {
@@ -30,7 +31,7 @@ export default function AboutPage() {
               <div className={styles.headerMedia}>
                 {aboutHeaderMedia.src ? (
                   <Image
-                    src={aboutHeaderMedia.src}
+                    src={withBasePath(aboutHeaderMedia.src)}
                     alt={aboutHeaderMedia.alt}
                     fill
                     priority
@@ -76,7 +77,7 @@ export default function AboutPage() {
           <div>
             <div className="section-label">Leadership</div>
             <p className={styles.sectionIntro}>
-              The people responsible for stewarding strategy, infrastructure, and organizational direction.
+              Project South’s leadership stewards strategy, programs, infrastructure, and organizational direction.
             </p>
           </div>
 
@@ -85,11 +86,7 @@ export default function AboutPage() {
             <div className={styles.leadershipGrid}>
               {leadership.map((person, index) => (
                 <div key={person.name} className={styles.personOffset} data-offset={index % 4}>
-                  <PersonCard
-                    {...person}
-                    size="large"
-                    imageAlt={person.imageAlt || person.name}
-                  />
+                  <PersonCard {...person} size="large" imageAlt={person.imageAlt || person.name} />
                 </div>
               ))}
             </div>
@@ -105,8 +102,7 @@ export default function AboutPage() {
               Organizers, strategists, educators, attorneys, and support staff moving the work every day.
             </h2>
             <p>
-              This section is intentionally more dynamic than a plain directory. Every headshot is framed as
-              part of the movement story—not just a list.
+              Across organizing, legal advocacy, political education, operations, and narrative work, Project South staff helps build and sustain movement power every day.
             </p>
           </div>
 

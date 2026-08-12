@@ -1,5 +1,5 @@
 import { PressArchive } from "@/components/press/PressArchive";
-import { pressArchiveCounts, pressReleases } from "@/data/press-releases";
+import { pressReleases } from "@/data/press-releases";
 import styles from "./page.module.css";
 
 export default function PressReleasesPage() {
@@ -19,8 +19,7 @@ export default function PressReleasesPage() {
             <div>
               <div className={styles.smallLabel}>Project South press archive</div>
               <p>
-                This archive preserves {pressArchiveCounts.total} unique releases from the legacy
-                Project South site: {pressArchiveCounts.pages} publication pages and {pressArchiveCounts.pdfs} direct PDF releases.
+                Explore Project South statements, press releases, advisories, filings, and public responses across the organization’s work.
               </p>
             </div>
           </div>
@@ -34,8 +33,7 @@ export default function PressReleasesPage() {
             <div>
               <h2 className={styles.headline}>Find the release. Follow the record.</h2>
               <p>
-                Search by title or topic, or separate original Project South publication pages from
-                direct PDF releases. Each item opens its original legacy destination in a new tab.
+                Search by title or topic, or browse Project South publication pages and direct PDF releases. Each item opens the original publication in a new tab.
               </p>
             </div>
           </div>

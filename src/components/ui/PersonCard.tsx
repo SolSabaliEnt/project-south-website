@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/site-path";
 
 type PersonCardProps = {
   name: string;
@@ -34,7 +35,7 @@ export function PersonCard({
         <div className="person-card-image-frame">
           {imageSrc ? (
             <Image
-              src={imageSrc}
+              src={withBasePath(imageSrc)}
               alt={imageAlt || name}
               fill
               sizes="220px"

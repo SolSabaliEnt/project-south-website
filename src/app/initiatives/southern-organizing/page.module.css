@@ -64,19 +64,19 @@
 .twoColumn,
 .darkGrid {
   display: grid;
-  grid-template-columns: minmax(250px, 0.52fr) minmax(0, 1.48fr);
+  grid-template-columns: minmax(360px, 0.78fr) minmax(0, 1.22fr);
   gap: 64px;
   align-items: start;
 }
 
 .darkGrid {
-  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(400px, 0.92fr);
 }
 
 .labelGrid {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 60px;
+  grid-template-columns: minmax(340px, 0.72fr) minmax(0, 1.28fr);
+  gap: 64px;
   align-items: start;
 }
 
@@ -177,7 +177,8 @@
   text-transform: uppercase;
 }
 
-.redButton {
+.redButton,
+.dark .redButton {
   min-height: 50px;
   padding: 0 17px;
   background: var(--ps-red);
@@ -256,6 +257,19 @@
   color: #82827d;
   font-size: 11px;
   line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+  .twoColumn,
+  .labelGrid {
+    grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+    gap: 42px;
+  }
+
+  .darkGrid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+    gap: 42px;
+  }
 }
 
 @media (max-width: 820px) {

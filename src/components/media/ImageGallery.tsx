@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { withBasePath } from "@/lib/site-path";
 
 type GalleryImage = {
   src?: string;
@@ -24,7 +25,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
       <div className="image-gallery-frame">
         {active.src ? (
           <Image
-            src={active.src}
+            src={withBasePath(active.src)}
             alt={active.alt}
             fill
             sizes="(max-width: 720px) 100vw, 60vw"

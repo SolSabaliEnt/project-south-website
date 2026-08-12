@@ -23,13 +23,51 @@
   background: var(--ps-black);
   color: var(--ps-white);
   padding: 112px 0 128px;
+  min-height: 720px;
+}
+
+.heroVisual {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 58%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.heroVisual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(90deg, var(--ps-black) 0%, rgba(9, 9, 9, 0.92) 12%, rgba(9, 9, 9, 0.5) 30%, rgba(9, 9, 9, 0.08) 52%, rgba(9, 9, 9, 0.16) 100%);
+  pointer-events: none;
+}
+
+.heroVisual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(9, 9, 9, 0.08) 0%, rgba(9, 9, 9, 0.22) 100%);
+  pointer-events: none;
+}
+
+.heroVisualImage {
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(1) contrast(1.04);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
 }
 
 .heroGrid {
   display: grid;
   grid-template-columns: 1fr 0.38fr;
   gap: 70px;
-  align-items: end;
+  align-items: start;
 }
 
 .heroEyebrow {
@@ -63,9 +101,13 @@
 }
 
 .heroAside {
+  grid-column: 1;
+  max-width: 460px;
+  margin-top: 54px;
   padding-top: 18px;
   border-top: 1px solid #333;
   color: #bfbfbb;
+  background: transparent;
 }
 
 .heroAsideLabel {
@@ -86,6 +128,7 @@
   position: absolute;
   right: -40px;
   bottom: -85px;
+  z-index: 1;
   color: rgba(255, 255, 255, 0.025);
   font-size: 330px;
   font-weight: 950;
@@ -420,6 +463,21 @@
 @media (max-width: 820px) {
   .hero {
     padding: 76px 0 82px;
+    min-height: auto;
+  }
+
+  .heroVisual {
+    inset: 0;
+    width: 100%;
+    opacity: 0.42;
+  }
+
+  .heroVisual::before {
+    background: linear-gradient(180deg, rgba(9, 9, 9, 0.4) 0%, rgba(9, 9, 9, 0.82) 58%, var(--ps-black) 100%);
+  }
+
+  .heroVisualImage {
+    object-position: 62% center;
   }
 
   .heroGrid,
@@ -439,6 +497,13 @@
   .heroSubtitle {
     margin-top: 34px;
     font-size: 20px;
+  }
+
+  .heroAside {
+    grid-column: 1;
+    margin-top: 0;
+    max-width: 520px;
+    background: rgba(9, 9, 9, 0.5);
   }
 
   .heroForty {

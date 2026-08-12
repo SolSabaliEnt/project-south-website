@@ -21,22 +21,10 @@ export const counteringStateRepression = {
     ],
   },
   focusAreas: [
-    {
-      label: "Surveillance",
-      copy: "Prevent counter-movement and state surveillance attempts.",
-    },
-    {
-      label: "ICE Prisons",
-      copy: "Shut down Georgia ICE prisons.",
-    },
-    {
-      label: "Fundamental Rights",
-      copy: "Protect Black, Muslim, and migrant populations.",
-    },
-    {
-      label: "Global Solidarity",
-      copy: "Support social justice movements in the Global South.",
-    },
+    { label: "Surveillance", copy: "Prevent counter-movement and state surveillance attempts." },
+    { label: "ICE Prisons", copy: "Shut down Georgia ICE prisons." },
+    { label: "Fundamental Rights", copy: "Protect Black, Muslim, and migrant populations." },
+    { label: "Global Solidarity", copy: "Support social justice movements in the Global South." },
   ],
   lawAndLiberation: {
     headline: "Human rights abuses don’t occur in a vacuum.",
@@ -51,29 +39,34 @@ export const counteringStateRepression = {
   galleryHeadline: "Movement defense is collective work.",
 } as const;
 
-// Add production image paths once the final assets are copied into /public.
 export const counteringStateRepressionMedia = {
   intro: {
+    src: "/images/countering-state-repression/new-header-on-legal-page.webp",
     alt: "Countering State Repression organizing",
     caption: "",
   },
   video: {
+    src: "/images/countering-state-repression/Screenshot 2026-08-11 at 8.28.52 PM.png",
     alt: "Law + Liberation video thumbnail",
   },
   gallery: [
     {
+      src: "/images/countering-state-repression/Screenshot 2026-08-11 at 8.34.45 PM.png",
       alt: "Countering State Repression field image 1",
       caption: "From the field",
     },
     {
+      src: "/images/countering-state-repression/Screenshot 2026-08-11 at 8.34.54 PM.png",
       alt: "Countering State Repression field image 2",
       caption: "From the field",
     },
     {
+      src: "/images/countering-state-repression/Screenshot 2026-08-11 at 8.35.02 PM.png",
       alt: "United Against Racism and Islamophobia group gathering",
       caption: "United against racism & Islamophobia",
     },
     {
+      src: "/images/countering-state-repression/Screenshot 2026-08-11 at 8.35.11 PM.png",
       alt: "Countering State Repression field image 4",
       caption: "From the field",
     },

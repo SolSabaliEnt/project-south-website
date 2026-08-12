@@ -6,13 +6,14 @@ import {
   brownsvilleSkills,
   rootedToBuildDocumentaryHref,
 } from "@/data/brownsville";
+import { withBasePath } from "@/lib/site-path";
 import styles from "./page.module.css";
 
 function Media({ src, alt, caption, aspect = "landscape", dark = false }: { src?: string; alt: string; caption?: string; aspect?: "landscape" | "portrait"; dark?: boolean }) {
   return (
     <figure className={styles.mediaBlock}>
       <div className={`${styles.mediaFrame} ${aspect === "portrait" ? styles.mediaPortrait : styles.mediaLandscape} ${dark ? styles.mediaDark : ""}`}>
-        {src ? <Image src={src} alt={alt} fill sizes="(max-width: 820px) 100vw, 40vw" className={styles.mediaImage} /> : <div className={styles.mediaPlaceholder}>Image placeholder</div>}
+        {src ? <Image src={withBasePath(src)} alt={alt} fill sizes="(max-width: 820px) 100vw, 40vw" className={styles.mediaImage} /> : <div className={styles.mediaPlaceholder}>Image placeholder</div>}
       </div>
       {caption ? <figcaption className={styles.mediaCaption}>{caption}</figcaption> : null}
     </figure>

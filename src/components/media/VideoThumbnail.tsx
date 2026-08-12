@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/site-path";
 
 type VideoThumbnailProps = {
   href: string;
@@ -20,7 +21,7 @@ export function VideoThumbnail({
       <div className="video-thumbnail-frame">
         {imageSrc ? (
           <Image
-            src={imageSrc}
+            src={withBasePath(imageSrc)}
             alt={imageAlt}
             fill
             sizes="(max-width: 720px) 100vw, 45vw"

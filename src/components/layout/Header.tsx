@@ -92,18 +92,22 @@ export function Header() {
 
           .header-logo-wrap {
             width: 140px;
-            height: 48px;
+            height: 50px;
           }
 
           .header-logo-image {
-            transform: scale(1.08);
+            transform: scale(1.55);
           }
         }
 
         @media (max-width: 420px) {
           .header-logo-wrap {
-            width: 128px;
-            height: 46px;
+            width: 136px;
+            height: 50px;
+          }
+
+          .header-logo-image {
+            transform: scale(1.55);
           }
         }
       `}</style>

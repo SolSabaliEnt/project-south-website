@@ -40,7 +40,7 @@ export function Header() {
 
         <button
           type="button"
-          className="mobile-menu-trigger"
+          className={`mobile-menu-trigger${menuOpen ? " is-open" : ""}`}
           aria-label={menuOpen ? "Close navigation" : "Open navigation"}
           aria-controls="mobile-navigation"
           aria-expanded={menuOpen}
@@ -97,6 +97,33 @@ export function Header() {
 
           .header-logo-image {
             transform: scale(1.55);
+          }
+
+          .site-header-inner .mobile-menu-trigger {
+            position: static;
+            left: auto;
+            top: auto;
+            transform: none;
+            grid-column: 2;
+            grid-row: 1;
+            justify-self: center;
+            align-self: center;
+          }
+
+          .mobile-menu-trigger.is-open .mobile-menu-icon span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+          }
+
+          .mobile-menu-trigger.is-open .mobile-menu-icon span:nth-child(2) {
+            opacity: 0;
+          }
+
+          .mobile-menu-trigger.is-open .mobile-menu-icon span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+          }
+
+          .mobile-menu-icon span {
+            transition: transform 160ms ease, opacity 160ms ease;
           }
         }
 
